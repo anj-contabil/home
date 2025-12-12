@@ -279,7 +279,7 @@
       const lower = msg.toLowerCase();
 
       if (['olá', 'oi', 'bom dia', 'boa tarde', 'boa noite', 'hello', 'hey'].includes(lower)) {
-        return 'Olá! Como posso te ajudar?';
+        return 'Olá! Como posso te ajudar? (posso te falar sobre: contato, localização, nossas redes<br>agendamento e etc';
       }
 
       if (
@@ -297,7 +297,7 @@
         msg.includes('localização') ||
         msg.includes('endereço')
       ) {
-        return `📍 Estamos localizados em <strong>Maringá - PR</strong>. Entre em contato para agendar uma visita!`;
+        return `📍 Estamos localizados em <strong>Umuarama - PR Na Avenida Viçosa</strong>. Entre em contato para agendar uma visita!`;
       }
 
       if (
@@ -317,7 +317,7 @@
       }
 
       if (msg.includes('reunião') || msg.includes('agendar') || msg.includes('consulta')) {
-        return `📅 Para agendar uma reunião, entre em contato via WhatsApp ou email. Em breve teremos agendamento direto por aqui!`;
+        return `📅 Para agendar uma reunião, entre em contato via WhatsApp (44) 99987-8556 ou email. Em breve teremos agendamento!`;
       }
 
       if (
@@ -326,7 +326,7 @@
         msg.includes('imposto') ||
         msg.includes('folha')
       ) {
-        return `📂 Dúvidas frequentes:<br>✅ Envio de documentos: até o 5º dia útil do mês.<br>✅ Folha de pagamento: fechamento no dia 28.<br>✅ Impostos: vencem entre os dias 20 e 25.`;
+        return `📂 Dúvidas frequentes:<br>✅ Envio de documentos: até o 5º dia útil do mês.<br>✅ Folha de pagamento: fechamento no dia 28.<br>✅ Impostos: vencem entre os dias 20 e 25.<br> Para mais informações converse conosco atraves do Whatsapp<br> (44) 99987-8556`;
       }
 
       if (
@@ -334,7 +334,7 @@
         msg.includes('notificação') ||
         msg.includes('vencimento')
       ) {
-        return `📣 Nós enviamos alertas sobre prazos e vencimentos de impostos e documentos via WhatsApp e email.`;
+        return `📣 Nós enviamos alertas sobre prazos e vencimentos de impostos e documentos via WhatsApp (44) 99987-8556 e email anj.assessoria.contabil@gmail.com.`;
       }
 
       if (
@@ -342,7 +342,7 @@
         msg.includes('declaração') ||
         msg.includes('informações')
       ) {
-        return `📝 Para a declaração do IR, envie:<br>• Informes de rendimento<br>• Despesas médicas<br>• Comprovantes de bens<br>• Outros documentos importantes`;
+        return `📝 Para a declaração do IR, envie:<br>• Informes de rendimento<br>• Despesas médicas<br>• Comprovantes de bens<br>• Outros documentos importantes.<br> Converse conosco através do Whatsapp (44) 99987-8556`;
       }
 
       if (
@@ -351,7 +351,7 @@
         msg.includes('atendimento') ||
         msg.includes('orcamento')
       ) {
-        return `📋 Podemos entender melhor suas necessidades. Você é:<br>• Pessoa física ou jurídica?<br>• Qual seu ramo?<br>• Precisa de abertura, contabilidade mensal ou folha?`;
+        return `📋 Podemos entender melhor suas necessidades. Você é:<br>• Pessoa física ou jurídica?<br>• Qual seu ramo?<br>• Precisa de abertura, contabilidade mensal ou folha?<br> Fale conosco no Whatsapp (44) 99987-8556`;
       }
 
       if (msg.includes('nota fiscal') || msg.includes('notas fiscais')) {
@@ -363,7 +363,7 @@
       }
 
       if (msg.includes('relatórios') || msg.includes('balancete') || msg.includes('fluxo de caixa')) {
-        return `📊 Geramos relatórios financeiros simples e detalhados para sua melhor gestão.`;
+        return `📊 Geramos relatórios contábeis simples e detalhados para sua melhor gestão.`;
       }
 
       if (msg.includes('despesas') || msg.includes('classificação')) {
@@ -371,7 +371,7 @@
       }
 
       if (msg.includes('análise de dados') || msg.includes('visualização')) {
-        return `📈 Oferecemos análises em tempo real e gráficos para acompanhar sua saúde financeira.`;
+        return `📈 Análisamos a saúde financeira de sua empresa e orientamos com as melhores opções para o crescimento de seu negocio.`;
       }
 
       if (msg.includes('fatura') || msg.includes('pagamento')) {
@@ -407,3 +407,4 @@
   </script>
 </body>
 </html>
+
