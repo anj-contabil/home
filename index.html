@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANJ Assessoria Contábil</title>
+  <link rel="icon" href="ANJ.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      background-color: rgb(14, 36, 50);
+      width: 100%;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      background-color: rgb(14, 36, 50);
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,1);
+    }
+
+    .imagem_topo {
+      margin-right: 20px;
+      width: 10%;
+      height: auto;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .white {
+      color: white;
+      padding: 20px;
+      max-width: 700px;
+    }
+
+    .gray {
+      color: rgb(203, 204, 206);
+    }
+
+    .footer {
+      background-color: black;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: white;
+    }
+
+    .icon {
+      width: 25px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Estilo do chatbot */
+    #chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 998;
+    }
+
+    #chatbot-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .chatbox {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 320px;
+      background: white;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+    }
+
+    .chat-header {
+      background-color: #0e2432;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #ff5050;
+    }
+
+    .chat-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      background: white;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .chat-input button {
+      margin-left: 8px;
+      padding: 8px 15px;
+      font-size: 14px;
+      background-color: #0e2432;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background-color: #14476a;
+    }
+
+    .user {
+      background-color: #0e2432;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      text-align: right;
+      max-width: 80%;
+      align-self: flex-end;
+      word-wrap: break-word;
+    }
+
+    .bot {
+      background-color: #e0e0e0;
+      color: black;
+      padding: 8px 12px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      text-align: left;
+      max-width: 80%;
+      align-self: flex-start;
+      word-wrap: break-word;
+    }
+
+    .bot a {
+      color: #0e2432;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="ANJ.png" alt="Logo ANJ" class="imagem_topo" />
+    <div class="title">
+      <div class="gray">
+        <h1>Bem-vindo à ANJ Assessoria Contábil</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="white">
+    <h3>Entre em contato conosco</h3>
+    <h4>
+      <img src="Gmail.png" class="icon" alt="Email" /> jpcontador205@gmail.com<br />
+      <img src="WhatsApp.png" class="icon" alt="WhatsApp" /> (44)999878556
+    </h4>
+
+    <h3>Onde estamos localizados</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d645.5443861813296!2d-53.289868118568855!3d-23.7562748888973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f2d1003e085237%3A0x9ab8f82054fd7df2!2sANJ%20Acessoria%20Cont%C3%A1bil!5e0!3m2!1spt-BR!2sbr!4v1749918745135!5m2!1spt-BR!2sbr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    <h3>Também estamos no Instagram!</h3>
+    <h4>
+      <img src="Instagram.png" class="icon" alt="Instagram" />
+      @anj_assessoria_contábil
+    </h4>
+  </div>
+
+  <footer class="footer">
+    <h6>© 2025 ANJ Assessoria Contábil. Todos os direitos reservados®</h6>
+  </footer>
+
+  <!-- Ícone do chatbot -->
+  <img src="Bot.png" id="chatbot-icon" alt="Chatbot" />
+
+  <!-- Caixa do chatbot -->
+  <div id="chatbox" class="chatbox" role="dialog" aria-hidden="true">
+    <div class="chat-header">
+      <span>ANJ Colab</span>
+      <button id="close-chat" class="close-btn">×</button>
+    </div>
+    <div class="chat-content" id="messages"></div>
+    <div class="chat-input">
+      <input type="text" id="input" placeholder="Digite sua mensagem..." />
+      <button id="send">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    const chatbotIcon = document.getElementById('chatbot-icon');
+    const chatbox = document.getElementById('chatbox');
+    const messages = document.getElementById('messages');
+    const input = document.getElementById('input');
+    const sendBtn = document.getElementById('send');
+    const closeBtn = document.getElementById('close-chat');
+
+    let greeted = false;
+
+    chatbotIcon.addEventListener('click', () => {
+      if (chatbox.style.display === 'flex') {
+        chatbox.style.display = 'none';
+        chatbox.setAttribute('aria-hidden', 'true');
+      } else {
+        chatbox.style.display = 'flex';
+        chatbox.setAttribute('aria-hidden', 'false');
+        input.focus();
+        if (!greeted) {
+          addMessage('Olá! Como posso te ajudar?', 'bot');
+          greeted = true;
+        }
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      chatbox.style.display = 'none';
+    });
+
+    function addMessage(text, sender) {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add(sender);
+      msgDiv.innerHTML = text;
+      messages.appendChild(msgDiv);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botResponse(msg) {
+      const lower = msg.toLowerCase();
+
+      if (['olá', 'oi', 'bom dia', 'boa tarde', 'boa noite', 'hello', 'hey'].includes(lower)) {
+        return 'Olá! Como posso te ajudar?';
+      }
+
+      if (
+        msg.includes('contato') ||
+        msg.includes('email') ||
+        msg.includes('telefone') ||
+        msg.includes('whatsapp')
+      ) {
+        return `📧 Você pode nos contatar por email: <a href="mailto:jpcontador205@gmail.com">jpcontador205@gmail.com</a><br>📱 WhatsApp: <a href="https://wa.me/5544999878556" target="_blank">(44) 99987-8556</a>`;
+      }
+
+      if (
+        msg.includes('onde') ||
+        msg.includes('local') ||
+        msg.includes('localização') ||
+        msg.includes('endereço')
+      ) {
+        return `📍 Estamos localizados em <strong>Maringá - PR</strong>. Entre em contato para agendar uma visita!`;
+      }
+
+      if (
+        msg.includes('instagram') ||
+        msg.includes('rede social') ||
+        msg.includes('@')
+      ) {
+        return `📸 Siga nosso Instagram: <a href="https://instagram.com/anj_assessoria_contábil" target="_blank">@anj_assessoria_contábil</a>`;
+      }
+
+      if (
+        msg.includes('nome') ||
+        msg.includes('quem são vocês') ||
+        msg.includes('empresa')
+      ) {
+        return `📌 Somos a <strong>ANJ Assessoria Contábil</strong>, especialistas em soluções contábeis para você e sua empresa.`;
+      }
+
+      if (msg.includes('reunião') || msg.includes('agendar') || msg.includes('consulta')) {
+        return `📅 Para agendar uma reunião, entre em contato via WhatsApp ou email. Em breve teremos agendamento direto por aqui!`;
+      }
+
+      if (
+        msg.includes('documento') ||
+        msg.includes('prazo') ||
+        msg.includes('imposto') ||
+        msg.includes('folha')
+      ) {
+        return `📂 Dúvidas frequentes:<br>✅ Envio de documentos: até o 5º dia útil do mês.<br>✅ Folha de pagamento: fechamento no dia 28.<br>✅ Impostos: vencem entre os dias 20 e 25.`;
+      }
+
+      if (
+        msg.includes('lembrete') ||
+        msg.includes('notificação') ||
+        msg.includes('vencimento')
+      ) {
+        return `📣 Nós enviamos alertas sobre prazos e vencimentos de impostos e documentos via WhatsApp e email.`;
+      }
+
+      if (
+        msg.includes('imposto de renda') ||
+        msg.includes('declaração') ||
+        msg.includes('informações')
+      ) {
+        return `📝 Para a declaração do IR, envie:<br>• Informes de rendimento<br>• Despesas médicas<br>• Comprovantes de bens<br>• Outros documentos importantes`;
+      }
+
+      if (
+        msg.includes('quero contratar') ||
+        msg.includes('serviço') ||
+        msg.includes('atendimento') ||
+        msg.includes('orcamento')
+      ) {
+        return `📋 Podemos entender melhor suas necessidades. Você é:<br>• Pessoa física ou jurídica?<br>• Qual seu ramo?<br>• Precisa de abertura, contabilidade mensal ou folha?`;
+      }
+
+      if (msg.includes('nota fiscal') || msg.includes('notas fiscais')) {
+        return `📄 Lançamento de notas fiscais e integração com sistema de gestão disponíveis.`;
+      }
+
+      if (msg.includes('conciliação bancária')) {
+        return `🏦 Auxiliamos na conciliação bancária para garantir precisão nas suas finanças.`;
+      }
+
+      if (msg.includes('relatórios') || msg.includes('balancete') || msg.includes('fluxo de caixa')) {
+        return `📊 Geramos relatórios financeiros simples e detalhados para sua melhor gestão.`;
+      }
+
+      if (msg.includes('despesas') || msg.includes('classificação')) {
+        return `💼 Organizamos automaticamente suas despesas e receitas para facilitar seu controle financeiro.`;
+      }
+
+      if (msg.includes('análise de dados') || msg.includes('visualização')) {
+        return `📈 Oferecemos análises em tempo real e gráficos para acompanhar sua saúde financeira.`;
+      }
+
+      if (msg.includes('fatura') || msg.includes('pagamento')) {
+        return `💵 Criamos faturas e enviamos lembretes para facilitar o controle dos seus recebíveis.`;
+      }
+
+      if (msg.includes('planejamento tributário')) {
+        return `📚 Fornecemos orientações básicas para otimizar sua carga tributária e evitar problemas com o fisco.`;
+      }
+
+      if (msg.trim() === '') {
+        return 'Por favor, digite algo para que eu possa ajudar!';
+      }
+
+      return `🤖 Desculpe, não entendi sua pergunta. Você pode tentar perguntar sobre contato, localização, serviços ou agendamento.`;
+    }
+
+    function sendMessage() {
+      const userMsg = input.value.trim();
+      if (!userMsg) return;
+      addMessage(userMsg, 'user');
+      input.value = '';
+      setTimeout(() => {
+        const reply = botResponse(userMsg);
+        addMessage(reply, 'bot');
+      }, 600);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+</body>
+</html>
